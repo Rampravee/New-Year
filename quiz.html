@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Frobes</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: #4d19db;
+            text-align: center;
+        }
+        .hhj{
+            color: #fff;
+        }
+        fieldset{
+            background-color: burlywood;
+            width: 350px;
+            margin-left: 560px;
+        }
+        span{
+            color: yellow;
+        }
+        #ram{
+            animation-name: animtext;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes animtext{
+            0%{
+                color: red;
+            }
+            25%{
+                color: maroon;
+            }
+            50%{
+                color: tomato;
+            }
+            75%{
+                color: brown;
+            }
+            100%{
+                color: violet;
+            }
+        }
+        .hhj{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="ram">Fun Quizz</h1>
+        <h1 class="hhj">New Year <span>Quiz</span></h1>
+    </header>
+    <fieldset>
+              <h3><b>1: What is <span>Jio's</span> next mega plan?</b></h3>
+              <label for="">5G sim</label>
+          <input type="radio" name="phone" value="5G sim"><br><br>
+          <label for="">Gaming Console</label>
+          <input type="radio" name="phone" value="Gaming Console"><br><br>
+          <label for="">Phone</label>
+          <input type="radio" name="phone" value="Phone"><br><br>
+          </fieldset>
+  </div><br>
+  <div id="hello">
+      <fieldset>
+      <h3><b>2: Which <span>coin</span> went to space?</b></h3>
+      <label for="">Dogecoin</label>
+          <input type="radio" name="flim" value="Dogecoin"><br><br>
+          <label for="">Bitcoin</label>
+          <input type="radio" name="flim" value="Bitcoin"><br><br>
+          <label for="">Litecoin</label>
+          <input type="radio" name="flim" value="Litecoin"><br><br>
+          </fieldset>
+          </div><br>
+  <div id="">
+      <fieldset>
+      <h3><b>3: Which company colabrates with <span>Hero Motors</span> to make bike like Royal & Enfield?</b></h3>
+      <label for="">Suzuki</label>
+          <input type="radio" name="light" value="Suzuki"><br><br>
+          <label for="">Royal & Enfield</label>
+          <input type="radio" name="light" value="Royal & Enfield"><br><br>
+          <label for="">Harley Davidson</label>
+          <input type="radio" name="light" value="Harley Davidson"><br><br>
+          </fieldset>
+      </div><br>
+      <div id="pr">
+          <fieldset>
+          <h3><b>4: Who's car is orange <span>Toyota Supra</span> is on sale?</b></h3>
+          <label for="">Paul Walker</label>
+              <input type="radio" name="vaccine" value="Paul Walker"><br><br>
+              <label for="">Vin Diesel</label>
+              <input type="radio" name="vaccine" value="Vin Diesel"><br><br>
+              <label for="">James Bond</label>
+              <input type="radio" name="vaccine" value="James Bond"><br><br>
+              </fieldset>
+          </div><br>
+          <div id="bee">
+            <fieldset>
+              <h3><b>5: Which company is going to bring <span>Drone Phone</span>?</b></h3>
+              <label for="">Vivo</label>
+                  <input type="radio" name="cd" value="Vivo"><br><br>
+                  <label for="">Oppo</label>
+                  <input type="radio" name="cd" value="Oppo"><br><br>
+                  <label for="">Mi</label>
+                  <input type="radio" name="cd" value="Mi"><br><br><br><br>
+                     </fieldset><br>
+                     <button onclick="check()">Check Answers</button>
+                     <h2 id="score">Score:0</h2>
+              </div><br><br>
+</body>
+<script>
+    var score = 0;
+    function check() {
+        var phone = document.querySelector('input[name="phone"]:checked').value;
+        if (phone == "Gaming Console") {
+            score = score +1;
+        }
+        var flim = document.querySelector('input[name="flim"]:checked').value;
+        if (flim == "Dogecoin") {
+            score = score +1;
+        }
+        var light = document.querySelector('input[name="light"]:checked').value;
+        if (light == "Harley Davidson") {
+            score = score +1;
+        }
+        var vaccine = document.querySelector('input[name="vaccine"]:checked').value;
+        if (vaccine == "Paul Walker") {
+            score = score +1;
+        }
+        var cd = document.querySelector('input[name="cd"]:checked').value;
+        if (cd == "Vivo") {
+            score = score +1;
+        }
+        document.getElementById("score").innerText =
+        "Score: " + score;
+    }
+</script>
+</html>
